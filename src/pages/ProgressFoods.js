@@ -5,6 +5,7 @@ import FavoriteButton from '../components/FavoriteButton';
 import { getInProgressRecipes,
   setRecipesProgress, setDoneRecipe } from '../services/LocalStorage';
 // import RecipesContext from '../context/RecipesContext';
+import '../style/progressFoods.css';
 
 const copy = require('clipboard-copy');
 
@@ -108,55 +109,68 @@ function ProgressFoods() {
         src={ detailMeals.strMealThumb }
         alt="imagem da receita"
         data-testid="recipe-photo"
+        className="detailsFoods__img"
       />
-      <p
-        data-testid="recipe-title"
-      >
-        {detailMeals.strMeal}
-      </p>
-      <button
-        type="button"
-        data-testid="share-btn"
-        onClick={ shareButton }
-      >
-        {shareMessage ? (<p>Link copied!</p>) : (
-          <img src={ shareIcon } alt="Share" />
-        )}
-      </button>
-      <FavoriteButton
-        isFavorite={ isFavorite }
-        setIsfavorite={ setIsfavorite }
-        recipe={ detailMeals }
-      />
+      <section className="detailsFoods__title__buttons">
+
+        <p
+          data-testid="recipe-title"
+          className="detailsFoods__title"
+        >
+          {detailMeals.strMeal}
+        </p>
+        <button
+          type="button"
+          data-testid="share-btn"
+          onClick={ shareButton }
+          className="detailsFoods__share__button"
+        >
+          {shareMessage ? (<p>Link copied!</p>) : (
+            <img src={ shareIcon } alt="Share" />
+          )}
+        </button>
+        <FavoriteButton
+          isFavorite={ isFavorite }
+          setIsfavorite={ setIsfavorite }
+          recipe={ detailMeals }
+          classe="detailsFoods__favorite__button"
+        />
+      </section>
       <p
         data-testid="recipe-category"
+        className="detailsFoods__category"
       >
         {detailMeals.strCategory}
       </p>
-      <h1>Ingredientes</h1>
-      {ingredient.map(({ nome, feito }, index) => (
-        <label
-          data-testid={ `${index}-ingredient-step` }
-          key={ index }
-          htmlFor={ `${index}-ingredient-step` }
-        >
-          {`- ${nome} - ${measure[index]}`}
-          <input
-            type="checkbox"
-            id={ `${index}` }
-            // defaultChecked={ Boolean(feito) }
-            // checked={ feito }
-            defaultChecked={ Boolean(feito) }
-            onClick={ () => checkIngredients(index) }
-          />
-        </label>
+      <h1 className="detailsFoods__title">Ingredientes</h1>
+      <div className="progressFoods__container">
+        {ingredient.map(({ nome, feito }, index) => (
+          <label
+            data-testid={ `${index}-ingredient-step` }
+            className="progressFoods__name__ingredientes"
+            key={ index }
+            htmlFor={ `${index}-ingredient-step` }
+          >
+            {`- ${nome} - ${measure[index]}`}
+            <input
+              type="checkbox"
+              id={ `${index}` }
+              // defaultChecked={ Boolean(feito) }
+              // checked={ feito }
+              defaultChecked={ Boolean(feito) }
+              onClick={ () => checkIngredients(index) }
+            />
+          </label>
 
-      ))}
-      <p
-        data-testid="instructions"
-      >
-        {detailMeals.strInstructions}
-      </p>
+        ))}
+      </div>
+      <div className="progressFoods__container">
+        <p
+          data-testid="instructions"
+        >
+          {detailMeals.strInstructions}
+        </p>
+      </div>
 
       {recipeDone
       && (
@@ -165,7 +179,7 @@ function ProgressFoods() {
             type="button"
             data-testid="finish-recipe-btn"
             onClick={ finishRecipe }
-            className="datails__start__button"
+            className="progressFoods__start__button"
             disabled={ disableFinishBtn }
           >
             Finalizar Receita

@@ -80,11 +80,11 @@ function ProgressDrinks() {
 
   return (
     <div>
-      <div>DetailsDrinks</div>
       <img
         src={ detailDrinks?.strDrinkThumb }
         alt="imagem da receita"
         data-testid="recipe-photo"
+        className="detailsDrinks__img"
       />
       <p
         data-testid="recipe-title"
