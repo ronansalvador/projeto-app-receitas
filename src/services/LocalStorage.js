@@ -40,26 +40,26 @@ export function getDoneRecipes() {
 
 export function setRecipesProgress(category, foodID, ingredients) {
   const newEntry = { [foodID]: [...ingredients] };
-  console.log(newEntry);
+  // console.log(newEntry);
   const inProgressRecipes = {
     cocktails: {},
     meals: {},
   };
   const PrevState = JSON.parse(localStorage.getItem('inProgressRecipes'))
   || inProgressRecipes;
-  console.log(PrevState);
+  // console.log(PrevState);
 
   const { cocktails, meals } = PrevState;
 
   if (category === 'foods') {
     const prevMeals = { ...meals, ...newEntry };
     PrevState.meals = prevMeals;
-    console.log(PrevState);
+    // console.log(PrevState);
     return localStorage.setItem('inProgressRecipes', JSON.stringify(PrevState));
   }
   const prevDrinks = { ...cocktails, ...newEntry };
   PrevState.cocktails = prevDrinks;
-  console.log(PrevState);
+  // console.log(PrevState);
   return localStorage.setItem('inProgressRecipes', JSON.stringify(PrevState));
 }
 
@@ -120,8 +120,8 @@ export function setFavoriteRecipes(recipe) {
     localStorage.setItem('favoriteRecipes', JSON.stringify(newEntry));
   } else {
     const update = [...PrevState, ...newEntry];
-    console.log(newEntry);
-    console.log(update);
+    // console.log(newEntry);
+    // console.log(update);
     localStorage
       .setItem('favoriteRecipes', JSON.stringify(update));
   }
@@ -131,14 +131,14 @@ export function removeFavoriteRecipe(id) {
   const PrevState = JSON.parse(localStorage.getItem('favoriteRecipes'));
   if (PrevState !== null) {
     const update = PrevState.filter((recipe) => recipe.id !== id);
-    console.log(update);
+    // console.log(update);
     localStorage
       .setItem('favoriteRecipes', JSON.stringify(update));
   }
 }
 
 export function setDoneRecipe(recipe) {
-  console.log(recipe);
+  // console.log(recipe);
   const { strTags } = recipe;
   // codigo abaixo aprendido no https://www.horadecodar.com.br/2021/04/03/como-pegar-a-data-atual-com-javascript/
   const data = new Date();
@@ -151,12 +151,12 @@ export function setDoneRecipe(recipe) {
     doneDate: dataAtual,
     tags: strTags,
   };
-  console.log(increment);
+  // console.log(increment);
   // reaproveito a função já criada para outro requisito
   const newEntry = NewEntryCreator(recipe);
   // junto o retorno da função acima com as inforamçoes adicionais para cumprir o requisito (data atual e tags)
   Object.assign(newEntry[0], increment);
-  console.log(newEntry);
+  // console.log(newEntry);
   const PrevState = JSON.parse(localStorage.getItem('doneRecipes'));
   if (PrevState === null) {
     localStorage.setItem('doneRecipes', JSON.stringify(newEntry));
