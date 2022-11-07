@@ -86,59 +86,71 @@ function ProgressDrinks() {
         data-testid="recipe-photo"
         className="detailsDrinks__img"
       />
-      <p
-        data-testid="recipe-title"
-      >
-        {detailDrinks?.strDrink}
-      </p>
-      <button
-        type="button"
-        data-testid="share-btn"
-        onClick={ shareButton }
-      >
-        {shareMessage ? (<p>Link copied!</p>) : (
-          <img src={ shareIcon } alt="Share" />
-        )}
-      </button>
-      <FavoriteButton
-        isFavorite={ isFavorite }
-        setIsfavorite={ setIsfavorite }
-        recipe={ detailDrinks }
-      />
+      <section className="detailsDrinks__title__buttons ">
+        <p
+          data-testid="recipe-title"
+          className="detailsDrinks__title"
+        >
+          {detailDrinks?.strDrink}
+        </p>
+        <button
+          type="button"
+          data-testid="share-btn"
+          onClick={ shareButton }
+          className="detailsDrinks__share__button"
+        >
+          {shareMessage ? (<p>Link copied!</p>) : (
+            <img src={ shareIcon } alt="Share" />
+          )}
+        </button>
+        <FavoriteButton
+          isFavorite={ isFavorite }
+          setIsfavorite={ setIsfavorite }
+          recipe={ detailDrinks }
+          classe="detailsDrinks__favorite__button"
+        />
+      </section>
       <p
         data-testid="alcoholic"
+        className="detailsDrinks__category"
       >
         {detailDrinks?.strAlcoholic}
+
       </p>
       <p
         data-testid="recipe-category"
+        className="detailsDrinks__category"
       >
         {detailDrinks?.strAlcoholic}
       </p>
-      <h1>Ingredientes</h1>
-      {ingredient.map(({ nome, feito }, index) => (
-        <label
-          data-testid={ `${index}-ingredient-step` }
-          key={ index }
-          htmlFor={ `${index}-ingredient-step` }
-        >
-          {`- ${nome} - ${measure[index]}`}
-          <input
-            type="checkbox"
-            id={ `${index}` }
-            // defaultChecked={ Boolean(feito) }
-            // checked={ feito }
-            defaultChecked={ feito }
-            onClick={ () => checkIngredients(index) }
-          />
-        </label>
+      <h1 className="detailsDrinks__title">Ingredientes</h1>
+      <div className="progressFoods__container">
+        {ingredient.map(({ nome, feito }, index) => (
+          <label
+            data-testid={ `${index}-ingredient-step` }
+            key={ index }
+            htmlFor={ `${index}-ingredient-step` }
+          >
+            {`- ${nome} - ${measure[index]}`}
+            <input
+              type="checkbox"
+              id={ `${index}` }
+              // defaultChecked={ Boolean(feito) }
+              // checked={ feito }
+              defaultChecked={ feito }
+              onClick={ () => checkIngredients(index) }
+            />
+          </label>
 
-      ))}
-      <p
-        data-testid="instructions"
-      >
-        {detailDrinks?.strInstructions}
-      </p>
+        ))}
+      </div>
+      <div className="progressFoods__container">
+        <p
+          data-testid="instructions"
+        >
+          {detailDrinks?.strInstructions}
+        </p>
+      </div>
 
       {recipeDone
       && (
@@ -147,7 +159,8 @@ function ProgressDrinks() {
             type="button"
             data-testid="finish-recipe-btn"
             onClick={ finishRecipe }
-            className="datails__start__button"
+            // className="datails__start__button"
+            className="progressFoods__start__button"
             disabled={ disableFinishBtn }
           >
             Finalizar Receita

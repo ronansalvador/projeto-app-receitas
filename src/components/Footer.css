@@ -40,43 +40,50 @@ table {
 }
 
 .footer {
-/* Layout Properties */
- /* top: 568px; */
-left: 0px;
-width: 360px;
-height: 60px;
-/* UI Properties */
-background: #EE4028 0% 0% no-repeat padding-box;
-border-radius: 3px;
-opacity: 1;
-/* border: 1px solid black; */
-/* https://pt.stackoverflow.com/questions/421158/como-centralizar-os-elementos-dentro-de-uma-div */
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-flex-direction: column;
-text-align: center;
+
+  /* UI Properties */
+  background: #ee4028 0% 0% no-repeat padding-box;
+  border-radius: 3px;
+
+  /* border: 1px solid black; */
+
+  /* https://pt.stackoverflow.com/questions/421158/como-centralizar-os-elementos-dentro-de-uma-div */
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 60px;
+  justify-content: center;
+
+  /* Layout Properties */
+
+  /* top: 568px; */
+  left: 0;
+  opacity: 1;
+  text-align: center;
+  width: 360px;
 }
 
 .footer_button_drink {
-/* Layout Properties */
-margin-left: -25px;
-width: 67px;
-height: 49px;
-/* UI Properties */
-opacity: 1;
-} 
+  height: 49px;
+
+  /* Layout Properties */
+  margin-left: -25px;
+
+  /* UI Properties */
+  opacity: 1;
+  width: 67px;
+}
 
 .footer_button_explore {
-  width: 67px;
-height: 49px;
+  height: 49px;
   margin-top: 2px;
+  width: 67px;
 }
 
 
 .footer_button_food {
-width: 67px;
-height: 49px;
-opacity: 1;
-margin-right: -19px;
+  height: 49px;
+  margin-right: -19px;
+  opacity: 1;
+  width: 67px;
 }

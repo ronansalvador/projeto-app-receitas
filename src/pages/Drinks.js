@@ -71,7 +71,7 @@ function Drinks() {
   return (
     <div>
       <Header />
-      <div>Drinks</div>
+
       <section className="foods_buttons">
         <button
           type="button"
