@@ -13,8 +13,7 @@ function Drinks() {
   const [filterDrinks, setFilterDrinks] = useState([]);
   const [magigNumber] = useState('5');
   const [filtro, setFiltro] = useState('');
-  console.log(filterDrinks);
-  console.log(drinks);
+
   useEffect(() => {
     async function getCategorysDrink() {
       try {
@@ -44,10 +43,8 @@ function Drinks() {
       setFiltro(target.name);
       try {
         const endopint = `https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${target.name}`;
-        console.log(endopint);
         const response = await fetch(endopint);
         const { drinks: array } = await response.json();
-        console.log(array);
 
         let newListFood = array;
         const ELEVEN = 11;
@@ -55,7 +52,6 @@ function Drinks() {
           const TWELVE = 12;
           newListFood = array.slice(0, TWELVE);
         }
-        console.log(newListFood);
         setFilterDrinks(newListFood);
       } catch (error) {
         return error;

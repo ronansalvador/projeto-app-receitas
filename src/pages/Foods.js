@@ -15,7 +15,6 @@ function Foods() {
   const [magigNumber] = useState('5');
   const [filterFoods, setFilterFoods] = useState([]);
   const [filtro, setFiltro] = useState('');
-  console.log(foods);
 
   useEffect(() => {
     async function getCategorysFood() {
