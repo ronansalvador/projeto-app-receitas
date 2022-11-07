@@ -29,7 +29,7 @@ function Profile() {
     localStorage.clear();
   };
 
-  console.log(email);
+  // console.log(email);
   return (
     <div>
       <Header />

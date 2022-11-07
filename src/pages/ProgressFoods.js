@@ -54,30 +54,16 @@ function ProgressFoods() {
         } else {
           setIngredient(listaProgresso.meals[idFood]);
         }
-        // console.log(listaProgresso);
       };
       detailsFoodsById();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }, [idFood]);
-
-  // function startRecipe() {
-  //   history.push(`/foods/${idFood}/in-progress`);
-  // }
-
-  // function startRecipe() {
-  //   history.push(`/foods/${idFood}/in-progress`);
-  // }
-
-  // function continueRecipe() {
-  //   // history.push(`/foods/${idFood}/in-progress`)
-  // }
 
   function finishRecipe() {
     setDoneRecipe(detailMeals);
     history.push('/done-recipes');
-    console.log('finalizar');
   }
 
   const shareButton = () => {
@@ -98,7 +84,6 @@ function ProgressFoods() {
 
   useEffect(() => {
     const verifyCheck = ingredient.every((item) => item.feito === true);
-    console.log(verifyCheck);
     setDisableFinishBtn(!verifyCheck);
   }, [ingredient]);
 

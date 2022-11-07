@@ -16,13 +16,13 @@ function Nationalities() {
         const url = 'https://www.themealdb.com/api/json/v1/1/list.php?a=list';
         const response = await fetch(url);
         const { meals } = await response.json();
-        console.log(response);
-        console.log(meals);
+        // console.log(response);
+        // console.log(meals);
         const newList = [...PrevState, ...meals];
-        console.log(newList);
+        // console.log(newList);
         setNationalities(newList);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
     getNationalities();

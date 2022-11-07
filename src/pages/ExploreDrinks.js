@@ -16,7 +16,7 @@ function ExploreDrinks() {
         const response = await fetch(url);
         const receitaAleatoria = await response.json();
         const idRandom = receitaAleatoria.drinks[0].idDrink;
-        console.log(idRandom);
+        // console.log(idRandom);
 
         setBtnClick(target.value);
         history.push(`/drinks/${idRandom}`);

@@ -10,7 +10,7 @@ function RecipesDone() {
   const [doneRecipes] = useState(getDoneRecipes() || []);
   const [filterRecipes, setFilterRecipes] = useState(doneRecipes);
   const [shareMessage, setshareMessage] = useState(false);
-  console.log(doneRecipes);
+  // console.log(doneRecipes);
 
   const shareButton = (type, id) => {
     setshareMessage(true);
@@ -20,18 +20,18 @@ function RecipesDone() {
 
   const filterAll = (target) => {
     const { name } = target;
-    console.log(name);
+    // console.log(name);
     if (name === 'All') {
       setFilterRecipes(doneRecipes);
     }
     if (name === 'Food') {
       const filterFood = doneRecipes.filter((recipe) => recipe.type === 'food');
-      console.log(filterFood);
+      // console.log(filterFood);
       setFilterRecipes(filterFood);
     }
     if (name === 'Drinks') {
       const filterDrink = doneRecipes.filter((recipe) => recipe.type === 'drink');
-      console.log(filterDrink);
+      // console.log(filterDrink);
       setFilterRecipes(filterDrink);
     }
   };

@@ -44,13 +44,13 @@ function ProgressDrinks() {
       };
       detailsDrinksById();
     } catch (error) {
-      console.log(error);
+      // console.log(error);
     }
   }, [idDrink]);
 
   function finishRecipe() {
     setDoneRecipe(detailDrinks);
-    console.log('finalizar');
+    // console.log('finalizar');
     // history.push(`/drinks/${idDrink}/in-progress`);
     history.push('/done-recipes');
   }
@@ -74,7 +74,7 @@ function ProgressDrinks() {
 
   useEffect(() => {
     const verifyCheck = ingredient.every((item) => item.feito === true);
-    console.log(verifyCheck);
+    // console.log(verifyCheck);
     setDisableFinishBtn(!verifyCheck);
   }, [ingredient]);
 

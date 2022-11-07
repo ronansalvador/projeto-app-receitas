@@ -72,7 +72,7 @@ function ProviderRecipes({ children }) {
       endPoint = `https://www.thecocktaildb.com/api/json/v1/1/search.php?f=${therm}`;
       break;
     default:
-      console.log('erro na passagem do parametro na searchBar de Header');
+      // console.log('erro na passagem do parametro na searchBar de Header');
     }
     return endPoint;
   }
@@ -92,7 +92,7 @@ function ProviderRecipes({ children }) {
       endPoint = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${therm}`;
       break;
     default:
-      console.log('erro na passagem do parametro na searchBar de Header');
+      // console.log('erro na passagem do parametro na searchBar de Header');
     }
     return endPoint;
   }
@@ -127,7 +127,7 @@ function ProviderRecipes({ children }) {
       endPoint = switchDrink(parameter, endPoint, therm);
     } if (endPoint.length > 1) {
       try {
-        console.log(endPoint);
+        // console.log(endPoint);
         const response = await fetch(endPoint);
         if (isFood) {
           const { meals: array } = await response.json();
@@ -153,7 +153,7 @@ function ProviderRecipes({ children }) {
     const response = await fetch(endopint);
     const { meals } = await response.json();
     setDetailMeals(meals[0]);
-    console.log(meals[0]);
+    // console.log(meals[0]);
     const ingredientsList = Object.entries(meals[0])
       .filter((info) => (info[0].includes('strIngredient') && info[1]))
       .map((item) => ({ nome: item[1], feito: false }));

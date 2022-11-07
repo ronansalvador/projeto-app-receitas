@@ -9,7 +9,7 @@ function IngredientsFoods() {
   const [ingredients, setIngredients] = useState([]);
   const { searchAPI } = useContext(RecipesContext);
 
-  console.log(ingredients);
+  // console.log(ingredients);
 
   useEffect(() => {
     async function getIngredients() {
@@ -24,7 +24,7 @@ function IngredientsFoods() {
         // console.log(newListIngredients);
         setIngredients(newListIngredients);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
     getIngredients();

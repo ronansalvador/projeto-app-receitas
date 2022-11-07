@@ -17,7 +17,7 @@ function ExploreFoods() {
         const response = await fetch(url);
         const receitaAleatoria = await response.json();
         const idRandom = receitaAleatoria.meals[0].idMeal;
-        console.log(idRandom);
+        // console.log(idRandom);
 
         setBtnClick(target.value);
         history.push(`/foods/${idRandom}`);

@@ -9,7 +9,7 @@ function FavoriteButton(props) {
   const [id, setId] = useState('');
   const { idDrink, idMeal } = recipe;
   const checkFavorite = JSON.parse(localStorage.getItem('favoriteRecipes'));
-  console.log(checkFavorite);
+  // console.log(checkFavorite);
   useEffect(() => {
     setId(
       () => {
@@ -25,7 +25,7 @@ function FavoriteButton(props) {
     if (checkFavorite !== null) {
       const responsecheck = Object.values(checkFavorite)
         .some((favorite) => favorite.id === id);
-      console.log(id);
+      // console.log(id);
       return setIsfavorite(responsecheck);
     }
   }, [checkFavorite]);

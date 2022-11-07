@@ -9,7 +9,7 @@ function IngredientsDrinks() {
   const [ingredients, setIngredients] = useState([]);
   const { searchAPI } = useContext(RecipesContext);
 
-  console.log(ingredients);
+  // console.log(ingredients);
 
   useEffect(() => {
     async function getIngredients() {
@@ -17,13 +17,13 @@ function IngredientsDrinks() {
         const url = 'https://www.thecocktaildb.com/api/json/v1/1/list.php?i=list';
         const response = await fetch(url);
         const { drinks } = await response.json();
-        console.log(drinks);
+        // console.log(drinks);
         const TWELVE = 12;
         const newListIngredients = drinks.slice(0, TWELVE);
-        console.log(newListIngredients);
+        // console.log(newListIngredients);
         setIngredients(newListIngredients);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     }
     getIngredients();
