@@ -33,7 +33,6 @@ function DetailsDrinks() {
       const response = await fetch(endopint);
       const { drinks } = await response.json();
       setDetailDrinks(drinks[0]);
-      console.log(drinks[0]);
       const ingredientsList = Object.entries(drinks[0])
         .filter((info) => (info[0].includes('strIngredient') && info[1]))
         .map((item) => item[1]);

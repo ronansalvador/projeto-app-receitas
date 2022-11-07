@@ -37,7 +37,6 @@ function DetailsFoods() {
       const { meals } = await response.json();
       setDetailMeals(meals[0]);
       setVideo(meals[0].strYoutube.replace('watch?v=', 'embed/'));
-      console.log(meals[0]);
       const ingredientsList = Object.entries(meals[0])
         .filter((info) => (info[0].includes('strIngredient') && info[1]))
         .map((item) => ({ nome: item[1], feito: false }));
