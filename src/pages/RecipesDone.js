@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import shareIcon from '../images/shareIcon.svg';
 import { getDoneRecipes } from '../services/LocalStorage';
+import '../style/recipesDone.css';
 
 const copy = require('clipboard-copy');
 
@@ -57,9 +58,10 @@ function RecipesDone() {
   return (
     <div className="foods_container">
       <Header />
-      <div>
+      <div className="favorites">
         <button
           type="button"
+          className="favorite_button"
           onClick={ ({ target }) => filterAll(target) }
           name="All"
           data-testid="filter-by-all-btn"
@@ -68,6 +70,7 @@ function RecipesDone() {
         </button>
         <button
           type="button"
+          className="favorite_button"
           onClick={ ({ target }) => filterAll(target) }
           name="Food"
           data-testid="filter-by-food-btn"
@@ -76,6 +79,7 @@ function RecipesDone() {
         </button>
         <button
           type="button"
+          className="favorite_button"
           onClick={ ({ target }) => filterAll(target) }
           name="Drinks"
           data-testid="filter-by-drink-btn"
@@ -85,7 +89,7 @@ function RecipesDone() {
       </div>
       {filterRecipes.map((recipe, index) => (
         // image, category, name, doneDate, tags, nationality, type, alcoholicOrNot
-        <div key={ index }>
+        <div key={ index } className="recipesDone__card">
           <Link to={ `/${recipe.type}s/${recipe.id}` }>
             <img
               src={ recipe.image }
@@ -93,6 +97,8 @@ function RecipesDone() {
               data-testid={ `${index}-horizontal-image` }
               className="details__img"
             />
+          </Link>
+          <div className="recipesDone__card__details">
             <p
               data-testid={ `${index}-horizontal-top-text` }
             >
@@ -103,22 +109,21 @@ function RecipesDone() {
               }
             </p>
             <p data-testid={ `${index}-horizontal-name` }>{recipe.name}</p>
-          </Link>
-
-          <p data-testid={ `${index}-horizontal-done-date` }>{recipe.doneDate}</p>
-          <button
-            type="button"
-            onClick={ () => shareButton(recipe.type, recipe.id) }
-          >
-            {shareMessage ? (<p>Link copied!</p>) : (
-              <img
-                src={ shareIcon }
-                alt="Share"
-                data-testid={ `${index}-horizontal-share-btn` }
-              />
-            )}
-          </button>
-          {exibirTags(recipe.tags, index)}
+            <p data-testid={ `${index}-horizontal-done-date` }>{recipe.doneDate}</p>
+            <button
+              type="button"
+              onClick={ () => shareButton(recipe.type, recipe.id) }
+            >
+              {shareMessage ? (<p>Link copied!</p>) : (
+                <img
+                  src={ shareIcon }
+                  alt="Share"
+                  data-testid={ `${index}-horizontal-share-btn` }
+                />
+              )}
+            </button>
+            {exibirTags(recipe.tags, index)}
+          </div>
         </div>
       ))}
     </div>

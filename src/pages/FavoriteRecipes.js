@@ -31,7 +31,7 @@ function FavoriteRecipes() {
     setDsplay(filtered);
   };
   return (
-    <div>
+    <div className="foods_container">
       <Header />
       <div className="favorites">
         <button

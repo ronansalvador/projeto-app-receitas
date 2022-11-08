@@ -1,0 +1,25 @@
+.recipesDone__card {
+  background: #fb7968 0% 0% no-repeat padding-box;
+  border-radius: 7px;
+  display: flex;
+  flex-flow: row wrap;
+  height: 170px;
+  margin: 10px;
+  opacity: 1;
+
+  /* justify-content: space-between;
+  align-items: center; */
+  position: sticky;
+}
+
+.recipesDone__card a img {
+  border-radius: 5px;
+  height: 150px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.recipesDone__card__details p {
+  color: white;
+  padding: 10px;
+}
