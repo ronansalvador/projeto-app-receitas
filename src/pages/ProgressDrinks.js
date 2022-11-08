@@ -79,7 +79,7 @@ function ProgressDrinks() {
   }, [ingredient]);
 
   return (
-    <div>
+    <div className="foods_container">
       <img
         src={ detailDrinks?.strDrinkThumb }
         alt="imagem da receita"
@@ -141,7 +141,6 @@ function ProgressDrinks() {
               onClick={ () => checkIngredients(index) }
             />
           </label>
-
         ))}
       </div>
       <div className="progressFoods__container">

@@ -31,9 +31,13 @@ function Profile() {
 
   // console.log(email);
   return (
-    <div>
+    <div className="foods_container">
       <Header />
-      <h3 data-testid="profile-email">{ email?.email }</h3>
+      <h3 data-testid="profile-email" className="profile__email">
+        E-mail:
+        {' '}
+        {email?.email }
+      </h3>
       <div className="profile__container">
         <button
           data-testid="profile-done-btn"

@@ -55,7 +55,7 @@ function RecipesDone() {
   };
 
   return (
-    <div>
+    <div className="foods_container">
       <Header />
       <div>
         <button

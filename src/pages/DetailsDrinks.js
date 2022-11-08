@@ -88,7 +88,7 @@ function DetailsDrinks() {
   };
 
   return (
-    <div>
+    <div className="foods_container">
       <img
         src={ detailDrinks?.strDrinkThumb }
         alt="imagem da receita"

@@ -2,23 +2,23 @@
 
   /* UI Properties */
   background: whitesmoke 0% 0% no-repeat padding-box;
+  font-family: 'Quicksand' , sans-serif;
   height: 650px;
   opacity: 1;
   width: 360px;
-  font-family: 'Quicksand', sans-serif;
 }
 
 .button_foods {
   background: #ee4028 0% 0% no-repeat padding-box;
   border: none;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 600;
   border-radius: 4px;
   box-shadow: 1px 2px 6px #262d2f69;
   color: white;
-  width: 100px;
+  font-family: 'Quicksand' , sans-serif;
+  font-weight: 600;
   height: 28px;
   opacity: 1;
+  width: 100px;
 }
 
 
@@ -39,16 +39,16 @@
 
 .foodcard_container {
   display: flex;
-  margin-top: 25px;
-  margin-left: -1.5px;
   flex-wrap: wrap;
   height: 340px;
+  margin-left: -1.5px;
+  margin-top: 25px;
   opacity: 1;
   overflow-y: scroll;
-  width: 358px;
   overflow-y: scroll;
+  width: 358px;
 }
 
-.food__footer{
+.food__footer {
   margin-top: 50px;
 }

@@ -92,7 +92,7 @@ function DetailsFoods() {
   }
 
   return (
-    <div>
+    <div className="foods_container">
       {/* <p>{detailMeals.idMeal}</p> */}
       <img
         src={ detailMeals.strMealThumb }
