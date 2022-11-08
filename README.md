@@ -1,3 +1,8 @@
+# Projeto realizado em grupo na Trybe
+## integrantes
+
+[Ronan Salvador](https://github.com/ronansalvador)
+
 # Layout Mobile First
 
 Para melhor Vizualização utilize a resolução de 360x650 pixel
