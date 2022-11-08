@@ -1,7 +1,6 @@
 .exploreDrinks-main {
 
   /* UI Properties */
-  background: var(--unnamed-color-f5f5f5) 0% 0% no-repeat padding-box;
   background: #f5f5f5 0% 0% no-repeat padding-box;
   display: flex;
   flex-direction: column;

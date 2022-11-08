@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import FoodCard from '../components/FoodCard';
 import RecipesContext from '../context/RecipesContext';
+import '../style/nationalities.css';
 
 function Nationalities() {
   const [nationalities, setNationalities] = useState([{ strArea: 'All' }]);
@@ -34,9 +35,9 @@ function Nationalities() {
   };
 
   return (
-    <div>
+    <div className="foods_container">
       <Header />
-      <div>
+      <div className="nationalities__filter">
         <select
           data-testid="explore-by-nationality-dropdown"
           value={ valueNatinalitie }
@@ -55,7 +56,7 @@ function Nationalities() {
           }
         </select>
       </div>
-      <div>
+      <div className="nationalities__card">
         { foods.map((item, index2) => (
           <FoodCard
             key={ item.idMeal }
