@@ -3,6 +3,17 @@
 
 [Ronan Salvador](https://github.com/ronansalvador)
 
+[Helio Siqueira](https://github.com/Helio-Siqueira)
+
+[João Carlos Vieira Filho](https://github.com/jvieyrah)
+
+[Lucca Rendall](https://github.com/LuccaRendall)
+
+[Luiz Tharik Lemos](https://github.com/Thariklz)
+
+
+
+
 # Layout Mobile First
 
 Para melhor Vizualização utilize a resolução de 360x650 pixel
