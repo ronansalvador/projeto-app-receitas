@@ -47,11 +47,12 @@ table {
   height: 170px;
   margin: 10px;
   opacity: 1;
+
   /* justify-content: space-between;
   align-items: center; */
   position: sticky;
-  width: 100%;
 }
+
 .subcard {
   padding: 5%;
 }
@@ -64,6 +65,7 @@ table {
   font-family: 'Quicksand' , sans-serif;
   height: 20%;
   letter-spacing: 1.32px;
+
   /* margin-left: 20px;
   margin-top: 15px; */
   opacity: 1;
@@ -78,6 +80,7 @@ table {
   font-family: 'Quicksand' , sans-serif;
   height: 38px;
   letter-spacing: 1.32px;
+
   /* margin-left: 20px;
   margin-top: 15px; */
   opacity: 1;

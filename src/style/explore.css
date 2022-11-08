@@ -1,49 +1,55 @@
 .explore-main {
-/* Layout Properties */
-top: 0px;
-left: -1px;
-width: 362px;
-height: 588px;
-/* UI Properties */
-background: var(--unnamed-color-f5f5f5) 0% 0% no-repeat padding-box;
-background: #F5F5F5 0% 0% no-repeat padding-box;
-opacity: 1;
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-flex-direction: column;
-text-align: center;
+
+  /* UI Properties */
+  background: var(--unnamed-color-f5f5f5) 0% 0% no-repeat padding-box;
+  background: #f5f5f5 0% 0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 520px;
+  justify-content: center;
+  left: -1px;
+  opacity: 1;
+  text-align: center;
+
+  /* Layout Properties */
+  top: 0;
+  width: 362px;
 }
 
 .explore-btn-1 {
+
+  /* UI Properties */
+  background: #ee4028 0% 0% no-repeat padding-box;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px #00000047;
+  color: white;
+  font-size: 25px;
+  font-style: bold;
+  height: 57px;
+  left: 32px;
+  opacity: 1;
+
   /* Layout Properties */
-top: 220px;
-left: 32px;
-width: 297px;
-height: 57px;
-/* UI Properties */
-background: #EE4028 0% 0% no-repeat padding-box;
-box-shadow: 0px 5px 10px #00000047;
-border-radius: 7px;
-opacity: 1;
-color: white;
-font-size: 25px;
-font-style: bold;
+  top: 220px;
+  width: 297px;
 }
 
 .explore-btn-2 {
+
+  /* UI Properties */
+  background: #ee4028 0% 0% no-repeat padding-box;
+  border-radius: 7px;
+  box-shadow: 0 5px 10px #00000047;
+  color: white;
+  font-size: 25px;
+  font-style: bold;
+  height: 57px;
+  left: 32px;
+  margin-top: 10px;
+  opacity: 1;
+
   /* Layout Properties */
-top: 307px;
-left: 32px;
-width: 297px;
-height: 57px;
-margin-top: 10px;
-/* UI Properties */
-background: #EE4028 0% 0% no-repeat padding-box;
-box-shadow: 0px 5px 10px #00000047;
-border-radius: 7px;
-opacity: 1;
-color: white;
-font-size: 25px;
-font-style: bold;
+  top: 307px;
+  width: 297px;
 }

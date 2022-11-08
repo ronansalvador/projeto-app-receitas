@@ -6,7 +6,7 @@ import '../style/explore.css';
 
 function Explore() {
   return (
-    <div>
+    <div className="foods_container">
       <Header />
 
       <main

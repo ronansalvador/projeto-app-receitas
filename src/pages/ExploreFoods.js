@@ -30,7 +30,7 @@ function ExploreFoods() {
   };
 
   return (
-    <div>
+    <div className="foods_container">
       <Header title="Explore Foods" />
       <main
         className="exploreFoods-main"
