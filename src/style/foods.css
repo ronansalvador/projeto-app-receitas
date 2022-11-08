@@ -44,11 +44,31 @@
   margin-left: -1.5px;
   margin-top: 25px;
   opacity: 1;
+
+  /* overflow-y: scroll; */
+
+  /* overflow-x: hidden; */
   overflow-y: scroll;
-  overflow-y: scroll;
+
+  /* overflow-y: hidden; */
   width: 358px;
 }
 
 .food__footer {
   margin-top: 50px;
+}
+
+@media ( min-width : 360px ) {
+
+  .food_card {
+    width: 160px;
+  }
+
+  .card_principal img {
+    border-radius: 6px;
+    height: 115px;
+    opacity: 1;
+    width: 130px;
+
+  }
 }

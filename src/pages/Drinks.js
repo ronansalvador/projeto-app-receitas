@@ -101,7 +101,9 @@ function Drinks() {
           ))
         )}
       </div>
-      <Footer />
+      <section className="food__footer">
+        <Footer />
+      </section>
     </div>
   );
 }
