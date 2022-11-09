@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import RecipesContext from '../context/RecipesContext';
 import '../style/login.css';
-import logomarca from '../images/login__image.svg';
+import logomarca from '../images/logomarca-01.svg';
 import { setEmailStorage,
   setSenhaStorage,
   setMealsTokenStorage,
